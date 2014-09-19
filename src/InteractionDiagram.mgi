@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="gui.GameDialog" x="637" y="342"/>
+    <CommunicationClass name="word.WordManager" x="285" y="291"/>
+    <CommunicationClass name="word.StringWord" x="295" y="58">
+        <Communication destinationClassName="word.WordManager"/>
+        <Communication destinationClassName="main.Main">
+            <Point x="254" y="76"/>
+        </Communication>
+    </CommunicationClass>
+    <CommunicationClass name="listeners.GPListener" x="695" y="60">
+        <Association destinationClassName="gui.GamePanel"
+            endpointName="GP" kind="Simple"/>
+        <Communication destinationClassName="word.StringWord"/>
+        <Communication destinationClassName="gui.GamePanel">
+            <Point x="640" y="232"/>
+        </Communication>
+    </CommunicationClass>
+    <CommunicationClass name="gui.Winner" x="666" y="384">
+        <Association destinationClassName="listeners.ButtonListener"
+            endpointName="ExitListener" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="word.SubStringWord" x="471" y="20">
+        <Extension destinationClassName="word.StringWord"/>
+        <Communication destinationClassName="word.StringWord">
+            <Point x="339" y="36"/>
+        </Communication>
+        <Communication destinationClassName="gui.GamePanel"/>
+    </CommunicationClass>
+    <CommunicationClass name="listeners.MusicButton" x="73" y="139"/>
+    <CommunicationClass name="gui.GameFrame" x="74" y="261">
+        <Association destinationClassName="gui.GamePanel"
+            endpointName="gpanel" kind="Simple"/>
+        <Communication destinationClassName="listeners.MusicButton"/>
+        <Communication destinationClassName="main.Main">
+            <Point x="170" y="204"/>
+        </Communication>
+    </CommunicationClass>
+    <CommunicationClass name="gui.GamePanel" x="482" y="215">
+        <Association destinationClassName="listeners.GPListener"
+            endpointName="GPL" kind="Simple"/>
+        <Association destinationClassName="word.StringWord"
+            endpointName="parole" kind="Simple"/>
+        <Association destinationClassName="word.WordManager"
+            endpointName="WM" kind="Simple"/>
+        <Communication destinationClassName="word.StringWord">
+            <Point x="481" y="215"/>
+            <Point x="349" y="170"/>
+        </Communication>
+        <Communication destinationClassName="listeners.GPListener">
+            <Point x="572" y="215"/>
+            <Point x="629" y="92"/>
+        </Communication>
+        <Communication destinationClassName="gui.GameFrame"/>
+        <Communication destinationClassName="main.Main"/>
+    </CommunicationClass>
+    <CommunicationClass name="gui.GameOver" x="646" y="300">
+        <Association destinationClassName="listeners.ButtonListener"
+            endpointName="ExitListener" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="main.Main" x="228" y="188">
+        <Association destinationClassName="gui.GameFrame"
+            endpointName="gframe" kind="Simple"/>
+        <Communication destinationClassName="listeners.MusicButton"/>
+    </CommunicationClass>
+    <CommunicationClass name="listeners.ButtonListener" x="202" y="405">
+        <Communication destinationClassName="word.WordManager"/>
+        <Communication destinationClassName="listeners.GPListener">
+            <Point x="739" y="425"/>
+        </Communication>
+        <Communication destinationClassName="gui.GameFrame"/>
+        <Communication destinationClassName="gui.GamePanel">
+            <Point x="410" y="376"/>
+        </Communication>
+        <Communication destinationClassName="main.Main"/>
+    </CommunicationClass>
+</ClassDiagram>

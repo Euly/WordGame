@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PackageAnalysis>
+    <Package name="word" x="66" y="158">
+        <DependencyLink destination="gui">
+            <Point x="147" y="167"/>
+        </DependencyLink>
+        <DependencyLink destination="main">
+            <Point x="144" y="224"/>
+        </DependencyLink>
+    </Package>
+    <Package name="main" x="255" y="215">
+        <DependencyLink destination="gui">
+            <Point x="308" y="169"/>
+        </DependencyLink>
+    </Package>
+    <Package name="listeners" x="438" y="162">
+        <DependencyLink destination="gui">
+            <Point x="411" y="170"/>
+        </DependencyLink>
+        <DependencyLink destination="main">
+            <Point x="431" y="224"/>
+        </DependencyLink>
+    </Package>
+    <Package name="gui" x="254" y="86">
+        <DependencyLink destination="listeners">
+            <Point x="378" y="98"/>
+        </DependencyLink>
+        <DependencyLink destination="word">
+            <Point x="163" y="96"/>
+        </DependencyLink>
+        <DependencyLink destination="main">
+            <Point x="253" y="169"/>
+        </DependencyLink>
+    </Package>
+</PackageAnalysis>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="gui.GameDialog" x="212" y="164">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="word.StringWord" x="667" y="67">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="word.WordManager"/>
+        <Communication destinationClassName="main.Main"/>
+    </Class>
+    <Class name="word.WordManager" x="676" y="359">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="gui.Winner" x="310" y="153">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="listeners.ButtonListener"
+            endpointName="ExitListener" kind="Simple">
+            <Point x="360" y="300"/>
+        </Association>
+    </Class>
+    <Class name="listeners.GPListener" x="370" y="373">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="gui.GamePanel"
+            endpointName="GP" kind="Simple"/>
+        <Communication destinationClassName="word.StringWord"/>
+        <Communication destinationClassName="gui.GamePanel"/>
+    </Class>
+    <Class name="word.SubStringWord" x="667" y="224">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="word.StringWord"/>
+        <Communication destinationClassName="word.StringWord"/>
+        <Communication destinationClassName="gui.GamePanel"/>
+    </Class>
+    <Class name="listeners.MusicButton" x="117" y="389">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="gui.GameFrame" x="199" y="23">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="gui.GamePanel"
+            endpointName="gpanel" kind="Simple"/>
+        <Communication destinationClassName="listeners.MusicButton"/>
+        <Communication destinationClassName="main.Main"/>
+    </Class>
+    <Class name="gui.GameOver" x="76" y="160">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="listeners.ButtonListener"
+            endpointName="ExitListener" kind="Simple">
+            <Point x="188" y="273"/>
+        </Association>
+    </Class>
+    <Class name="gui.GamePanel" x="426" y="14">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="listeners.GPListener"
+            endpointName="GPL" kind="Simple">
+            <Point x="515" y="334"/>
+        </Association>
+        <Association destinationClassName="word.StringWord"
+            endpointName="parole" kind="Simple"/>
+        <Association destinationClassName="word.WordManager"
+            endpointName="WM" kind="Simple">
+            <Point x="587" y="398"/>
+        </Association>
+        <Communication destinationClassName="word.StringWord"/>
+        <Communication destinationClassName="listeners.GPListener"/>
+        <Communication destinationClassName="gui.GameFrame"/>
+        <Communication destinationClassName="main.Main"/>
+    </Class>
+    <Class name="main.Main" x="32" y="61">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="gui.GameFrame"
+            endpointName="gframe" kind="Simple"/>
+        <Communication destinationClassName="listeners.MusicButton"/>
+    </Class>
+    <Class name="listeners.ButtonListener" x="119" y="311">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="word.WordManager"/>
+        <Communication destinationClassName="listeners.GPListener"/>
+        <Communication destinationClassName="gui.GameFrame"/>
+        <Communication destinationClassName="gui.GamePanel"/>
+        <Communication destinationClassName="main.Main"/>
+    </Class>
+</ClassDiagram>
